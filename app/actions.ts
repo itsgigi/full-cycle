@@ -67,7 +67,7 @@ export async function joinWaitlist(
   try {
     const res = await fetch(webhook, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({ ...entry, createdAt: new Date().toISOString() }),
       cache: "no-store",
     });
