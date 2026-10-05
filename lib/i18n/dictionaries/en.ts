@@ -37,7 +37,7 @@ export const en: Dictionary = {
       program: "Program",
       tracks: "Tracks",
       faq: "FAQ",
-      waitlist: "Sign up",
+      waitlist: "Apply",
     },
     langSwitch: "Language",
     footerTagline: "1:1 mentorship for junior developers: from idea to production, on real projects.",
@@ -109,7 +109,7 @@ export const en: Dictionary = {
       {
         path: "/frontend",
         title: "Solid interfaces",
-        text: "Components, state, accessibility and performance with [FRONTEND STACK].",
+        text: "Components, state, accessibility and performance with React, Next.js and TypeScript.",
         highlight: false,
       },
       {
@@ -219,7 +219,7 @@ export const en: Dictionary = {
 
   result: {
     eyebrow: "At the end of the program",
-    title: "You won’t leave with another certificate. You’ll have something to show.",
+    title: "You won’t leave with another certificate. You’ll have a GitHub to show."
     body: "A live product, a stronger GitHub and a project you can explain in an interview. Most importantly, you’ll have gone through the full cycle: from idea to production, through technical decisions, review, testing and deployment.",
     repoLabel: "full-cycle-project",
     repoSublabel: (n: number) => `${n} files in the repo`,
@@ -231,6 +231,28 @@ export const en: Dictionary = {
       "Live deploy with a public URL",
       "Pull request history with code review",
     ],
+  },
+
+  ai: {
+    eyebrow: "AI in the workflow",
+    title: "Learn to use AI without becoming dependent on AI.",
+    body: "AI can speed up development, but it does not replace understanding software. Use it to explore, generate and iterate; learn to verify its output, understand trade-offs and keep control of the code.",
+    items: [
+      { title: "Generate", text: "Use AI for boilerplate, alternatives and first implementations." },
+      { title: "Verify", text: "Test, read and check what it produces before integrating it." },
+      { title: "Decide", text: "Technical decisions remain yours: architecture, trade-offs and quality." },
+    ],
+  },
+
+  beforeAfter: {
+    eyebrow: "The level-up",
+    title: "The difference isn't how much code you can write. It's how much software you can take all the way to production.",
+    beforeLabel: "Before",
+    beforeTitle: "Tutorial → side project → GitHub → "I don't feel ready"",
+    beforeText: "You've learned tools and built things, but often without seeing everything that happens between a first idea and a product in production.",
+    afterLabel: "After",
+    afterTitle: "Idea → architecture → development → review → testing → CI/CD → production",
+    afterText: "You can explain the decisions you made, show how you work and walk through a complete project in an interview.",
   },
 
   mentor: {
