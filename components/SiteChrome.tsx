@@ -12,7 +12,8 @@ export function Logo({ lang }: { lang: Locale }) {
   );
 }
 
-export function SiteHeader({ lang }: { lang: Locale }) {
+// `localePaths`: percorso della pagina in ogni lingua, quando non basta cambiare il prefisso (vedi LocaleSwitcher).
+export function SiteHeader({ lang, localePaths }: { lang: Locale; localePaths?: Partial<Record<Locale, string>> }) {
   const t = getDictionary(lang).chrome;
   return (
     <header className="site-header">
@@ -23,7 +24,8 @@ export function SiteHeader({ lang }: { lang: Locale }) {
           <Link href={localePath(lang, "/#programma")} className="nav-link">{t.nav.program}</Link>
           <Link href={localePath(lang, "/#pacchetti")} className="nav-link">{t.nav.tracks}</Link>
           <Link href={localePath(lang, "/#faq")} className="nav-link">{t.nav.faq}</Link>
-          <LocaleSwitcher lang={lang} label={t.langSwitch} />
+          <Link href={localePath(lang, "/blog")} className="nav-link">{t.nav.blog}</Link>
+          <LocaleSwitcher lang={lang} label={t.langSwitch} paths={localePaths} />
           <Link href={localePath(lang, "/#lista")} className="btn btn-glow btn-sm" data-track="CTA Click" data-track-location="nav_waitlist">{t.nav.waitlist}</Link>
         </nav>
       </div>
@@ -51,6 +53,7 @@ export function SiteFooter({ lang }: { lang: Locale }) {
             <p className="footer-label">{t.footerLinks}</p>
             <Link href={localePath(lang, "/#pacchetti")}>{t.nav.tracks}</Link>
             <Link href={localePath(lang, "/#faq")}>{t.nav.faq}</Link>
+            <Link href={localePath(lang, "/blog")}>{t.nav.blog}</Link>
             <Link href={localePath(lang, "/privacy")}>{t.privacy}</Link>
           </nav>
         </div>

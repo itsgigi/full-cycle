@@ -1,0 +1,39 @@
+export const metadata = {
+  title: "How to write a post for this blog",
+  description: "Sample template: metadata, headings, code, tables and links. Duplicate this file to start a new post.",
+  date: "2026-10-05",
+  tags: ["guide", "blog"],
+  draft: true,
+  translations: { it: "come-scrivere-un-articolo" },
+}
+
+This is a **sample post**. While `draft: true` is set, it only shows up with `npm run dev`.
+
+## Metadata
+
+- `title` and `description` become the title and description for Google and social: keep the description around 150-160 characters.
+- `date` uses the `YYYY-MM-DD` format; add `updated` when you revise the content.
+- `translations` links the version in the other language (file slug, without `.mdx`).
+
+## Text
+
+Write plain markdown. Use `##` for sections and `###` for subsections: the page renders the `#` title.
+
+> Quotes are highlighted like this.
+
+### Code
+
+```ts
+export function hello(name: string) {
+  return `Hello ${name}`;
+}
+```
+
+### Tables
+
+| Phase | Tool |
+| --- | --- |
+| Frontend | Next.js |
+| Deploy | Vercel |
+
+Internal links like [the tracks](/en#pacchetti) stay on the site; external links like [MDX](https://mdxjs.com) open in a new tab.

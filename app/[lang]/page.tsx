@@ -175,7 +175,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <main id="main">
         {/* HERO */}
-        <section id="top" className="hero" aria-labelledby="hero-title" style={{ marginTop: "3rem", marginBottom: "6rem" }}>
+        <section id="top" className="hero" aria-labelledby="hero-title" style={{ marginBottom: "7rem", paddingTop: "2rem", paddingBottom: "2rem" }}>
           <div className="container hero-inner">
             <Eyebrow variant="glass">{t.hero.eyebrow}</Eyebrow>
             <h1 id="hero-title" className="display-xl">{t.hero.title}</h1>

@@ -1,0 +1,39 @@
+export const metadata = {
+  title: "Come scrivere un articolo per questo blog",
+  description: "Template di esempio: metadati, titoli, codice, tabelle e link. Duplica questo file per iniziare un nuovo articolo.",
+  date: "2026-10-05",
+  tags: ["guida", "blog"],
+  draft: true,
+  translations: { en: "how-to-write-a-post" },
+}
+
+Questo è un **articolo di esempio**. Finché `draft: true` è visibile solo con `npm run dev`.
+
+## Metadati
+
+- `title` e `description` diventano titolo e descrizione per Google e per i social: description sui 150-160 caratteri.
+- `date` in formato `YYYY-MM-DD`; aggiungi `updated` quando aggiorni il contenuto.
+- `translations` collega la versione nell'altra lingua (slug del file, senza `.mdx`).
+
+## Testo
+
+Scrivi in markdown normale. Usa `##` per le sezioni e `###` per le sottosezioni: il titolo `#` lo genera la pagina.
+
+> Le citazioni vengono evidenziate così.
+
+### Codice
+
+```ts
+export function hello(name: string) {
+  return `Ciao ${name}`;
+}
+```
+
+### Tabelle
+
+| Fase | Strumento |
+| --- | --- |
+| Frontend | Next.js |
+| Deploy | Vercel |
+
+Link interni come [i pacchetti](/it#pacchetti) restano nel sito; i link esterni come [MDX](https://mdxjs.com) si aprono in una nuova scheda.

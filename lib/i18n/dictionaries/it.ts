@@ -37,6 +37,7 @@ export const it = {
       program: "Programma",
       tracks: "Pacchetti",
       faq: "FAQ",
+      blog: "Blog",
       waitlist: "Iscriviti",
     },
     langSwitch: "Lingua",
@@ -364,6 +365,26 @@ export const it = {
     rightsTitle: "I tuoi diritti",
     rights: (email: string) =>
       `Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento scrivendo a ${email}. Hai anche il diritto di proporre reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).`,
+  },
+
+  blog: {
+    title: "Blog",
+    eyebrow: "Blog",
+    heading: "Dall'idea alla produzione, un articolo alla volta.",
+    featured: "In evidenza",
+    rss: "Feed RSS",
+    description: "Articoli pratici per sviluppatori junior: progetti veri, architettura, deploy e carriera nel software.",
+    intro: "Guide pratiche e lezioni dal lavoro vero: come si porta un progetto dall'idea alla produzione.",
+    empty: "Nessun articolo ancora. Torna presto.",
+    readMore: "Leggi l'articolo",
+    readingTime: (minutes: number) => `${minutes} min di lettura`,
+    updated: (date: string) => `Aggiornato il ${date}`,
+    draft: "Bozza",
+    back: "Tutti gli articoli",
+    ctaEyebrow: "Full Cycle",
+    ctaTitle: "Vuoi costruire un progetto vero, dall'idea alla produzione?",
+    ctaText: "Full Cycle è una mentorship 1:1 per sviluppatori junior. Iscriviti alla lista d'attesa.",
+    ctaButton: "Iscriviti alla lista",
   },
 
   notFound: {

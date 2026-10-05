@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Gli articoli del blog sono file .mdx in content/blog, importati dalle pagine.
+  pageExtensions: ["ts", "tsx", "mdx"],
   async headers() {
     return [
       {
@@ -17,4 +20,11 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Plugin come stringhe: Turbopack non accetta funzioni.
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm"],
+  },
+});
+
+export default withMDX(nextConfig);

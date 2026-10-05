@@ -37,6 +37,7 @@ export const en: Dictionary = {
       program: "Program",
       tracks: "Tracks",
       faq: "FAQ",
+      blog: "Blog",
       waitlist: "Sign up",
     },
     langSwitch: "Language",
@@ -362,6 +363,26 @@ export const en: Dictionary = {
     rightsTitle: "Your rights",
     rights: (email: string) =>
       `You can request access to, correction, deletion, restriction or portability of your data, and object to its processing, at any time by writing to ${email}. You also have the right to lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it) or your local supervisory authority.`,
+  },
+
+  blog: {
+    title: "Blog",
+    eyebrow: "Blog",
+    heading: "From idea to production, one article at a time.",
+    featured: "Featured",
+    rss: "RSS feed",
+    description: "Practical articles for junior developers: real projects, architecture, deployment and software careers.",
+    intro: "Practical guides and lessons from real work: how to take a project from idea to production.",
+    empty: "No articles yet. Check back soon.",
+    readMore: "Read the article",
+    readingTime: (minutes: number) => `${minutes} min read`,
+    updated: (date: string) => `Updated on ${date}`,
+    draft: "Draft",
+    back: "All articles",
+    ctaEyebrow: "Full Cycle",
+    ctaTitle: "Want to build a real project, from idea to production?",
+    ctaText: "Full Cycle is 1:1 mentorship for junior developers. Join the waitlist.",
+    ctaButton: "Join the waitlist",
   },
 
   notFound: {
