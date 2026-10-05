@@ -115,6 +115,10 @@ export function WaitlistForm({ lang, t, tracks, privacyHref, privacyLabel }: Pro
         </label>
         <textarea id="wl-goal" name="goal" rows={3} maxLength={2000} defaultValue={values?.goal} />
       </div>
+      <div className="field">
+        <label htmlFor="wl-gap">{t.gap}</label>
+        <textarea id="wl-gap" name="gap" rows={4} maxLength={2000} defaultValue={values?.gap} required />
+      </div>
 
       {/* Honeypot anti-spam, invisibile agli utenti */}
       <div className="hp" aria-hidden="true">
