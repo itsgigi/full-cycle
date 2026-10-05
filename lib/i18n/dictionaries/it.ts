@@ -52,29 +52,29 @@ export const it = {
 
   hero: {
     eyebrow: "Percorso 1:1 per sviluppatori junior",
-    title: "Non basta più saper scrivere codice.",
-    subtitle: "Impara a far vivere il software, dall'idea alla produzione.",
+    title: "Hai imparato a programmare. Ora impara a lavorare come uno sviluppatore.",
+    subtitle: "Costruisci un prodotto reale dall'idea al deploy, imparando a gestire le fasi che trasformano il codice in software.",
     stackAria: "Tecnologie usate nel percorso",
-    ctaPrimary: "Voglio imparare",
-    ctaSecondary: "Scegli il pacchetto",
+    ctaPrimary: "Candidati ai 3 posti gratuiti",
+    ctaSecondary: "Scopri il percorso",
     promo: (n: number) => `Lancio: gratis per i primi ${n} studenti selezionati`,
   },
 
   problem: {
     eyebrow: "Il problema",
-    title: "Il ruolo “junior” è cambiato. I percorsi per diventarlo, no.",
+    title: "Conoscere un linguaggio o un framework è solo una parte del lavoro.",
     items: [
       {
-        title: "Si chiede autonomia end-to-end",
-        text: "Anche a chi è alle prime armi viene chiesto di capire come un'app arriva in produzione, non solo di chiudere ticket su un pezzo.",
+        title: "Hai studiato, ma hai visto solo una parte del percorso",
+        text: "Tutorial, corsi e side project ti hanno insegnato a scrivere codice. Ma nello sviluppo reale devi capire come un'idea diventa un prodotto: requisiti, architettura, sviluppo, testing, review, deploy e manutenzione.",
       },
       {
-        title: "L'AI scrive codice, serve chi capisce il sistema",
-        text: "Generare una funzione è facile. Sapere dove metterla, come testarla e come rilasciarla è ciò che fa la differenza.",
+        title: "Sai sviluppare una feature, ma non sempre portarla fino in produzione",
+        text: "È diverso completare una funzionalità in locale e occuparsi di tutto quello che succede prima e dopo: Git, ambienti, CI/CD, performance, errori, monitoraggio e qualità del codice.",
       },
       {
-        title: "I progetti da tutorial non convincono",
-        text: "Le aziende guardano GitHub. Una todo-list clonata non racconta come lavori su un progetto vero.",
+        title: "Ti manca l'esperienza che collega tutti i pezzi",
+        text: "Puoi conoscere React, TypeScript, Git o un database singolarmente. Il vero salto è imparare a usarli insieme, prendendo decisioni tecniche e affrontando i problemi che emergono durante un progetto reale.",
       },
     ],
   },
