@@ -6,9 +6,9 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 export type WaitlistState = {
   status: "idle" | "success" | "error";
   message?: string;
-  fieldErrors?: Partial<Record<"name" | "email" | "track", string>>;
+  fieldErrors?: Partial<Record<"name" | "email" | "track" | "gap", string>>;
   // Valori inviati, per ripopolare il form dopo un errore (React resetta il form dopo l'action).
-  values?: Record<"name" | "email" | "track" | "level" | "budget" | "goal", string>;
+  values?: Record<"name" | "email" | "track" | "level" | "budget" | "goal" | "gap", string>;
   // Contatore dei tentativi: usato come key per rimontare il form con i defaultValue aggiornati.
   attempt?: number;
 };
@@ -39,6 +39,7 @@ export async function joinWaitlist(
     level: field(formData, "level", 100),
     budget: field(formData, "budget", 100),
     goal: field(formData, "goal", 2000),
+    gap: field(formData, "gap", 2000),
     lang,
   };
 
