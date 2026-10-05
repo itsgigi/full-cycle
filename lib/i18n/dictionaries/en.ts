@@ -218,9 +218,9 @@ export const en: Dictionary = {
   },
 
   result: {
-    eyebrow: "The result",
-    title: "A GitHub that speaks for you.",
-    body: "Anyone reading your profile sees complete projects: documented architecture, tests, pipelines and a working app online. They also see how you work in a team: pull requests, code review and clean Git management, with sprints and an agile flow. It's concrete proof that you can work across the whole cycle, not just one piece.",
+    eyebrow: "At the end of the program",
+    title: "You won’t leave with another certificate. You’ll have something to show.",
+    body: "A live product, a stronger GitHub and a project you can explain in an interview. Most importantly, you’ll have gone through the full cycle: from idea to production, through technical decisions, review, testing and deployment.",
     repoLabel: "full-cycle-project",
     repoSublabel: (n: number) => `${n} files in the repo`,
     repoChecklist: [
@@ -236,11 +236,11 @@ export const en: Dictionary = {
   mentor: {
     eyebrow: "Your mentor",
     role: "Software developer",
-    bio: "I'm a software developer: I design and build web products from the interface to the deploy, through APIs, databases and pipelines. I created Full Cycle to give juniors what you usually only learn on the job: working across the entire cycle of a real project, with someone reviewing your code.",
+    bio: "I’m a software developer who has worked across very different environments: from small teams where building a performant product depends on careful decisions, to multinational companies serving millions of users. Those contexts taught me that there is no single way to build software: scale, teams, goals, constraints and priorities all change what good engineering looks like.",
     points: [
-      "I mentor you personally, 1:1, from the first call to the final deploy",
-      "I review your code on every pull request",
-      "We choose projects based on the job you want",
+      "Experience across very different company sizes and environments",
+      "I mentor you 1:1, from the first call to the final deploy",
+      "I review your code and help you understand the why behind technical decisions",
     ],
     newTab: " (opens in a new tab)",
   },
@@ -285,8 +285,8 @@ export const en: Dictionary = {
 
   waitlist: {
     title: "We're opening the first spots.",
-    body: "Choose a track and tell us a bit about yourself: we'll reach out for a free intro call before the official launch.",
-    bodyFree: (n: number) => ` The first ${n} selected students join for free.`,
+    body: "Full Cycle is a limited 1:1 mentorship program. Apply, tell me where you’re starting from and we’ll have an intro call to see if the program is right for you.",
+    bodyFree: (n: number) => `The first ${n} selected participants join for free. The program value is €2,000.`,
   },
 
   ticket: {
@@ -309,7 +309,7 @@ export const en: Dictionary = {
     budget: "How much would you invest in a program like this?",
     goal: "What would you like to achieve?",
     optional: "(optional)",
-    submit: "Sign up",
+    submit: "Apply",
     pending: "Sending…",
     fineprint: "No spam. We only use your data to contact you about this program.",
     levelOptions: [
