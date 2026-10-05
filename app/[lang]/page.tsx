@@ -389,6 +389,45 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           />
         </section>
 
+        {/* AI */}
+        <section className="band-dark band-spaced" aria-labelledby="ai-title">
+          <div className="container section">
+            <div className="section-head">
+              <Eyebrow variant="dark">{t.ai.eyebrow}</Eyebrow>
+              <h2 id="ai-title" className="display-lg">{t.ai.title}</h2>
+              <p className="body-lg text-light">{t.ai.body}</p>
+            </div>
+            <div className="grid-3">
+              {t.ai.items.map((item) => (
+                <article key={item.title} className="card card-dark">
+                  <h3>{item.title}</h3>
+                  <p className="body-lg text-light">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PRIMA / DOPO */}
+        <section className="container section" aria-labelledby="before-after-title">
+          <div className="section-head">
+            <Eyebrow>{t.beforeAfter.eyebrow}</Eyebrow>
+            <h2 id="before-after-title" className="display-lg">{t.beforeAfter.title}</h2>
+          </div>
+          <div className="grid-2 before-after-grid">
+            <article className="card">
+              <p className="module-path">{t.beforeAfter.beforeLabel}</p>
+              <h3>{t.beforeAfter.beforeTitle}</h3>
+              <p className="body-lg">{t.beforeAfter.beforeText}</p>
+            </article>
+            <article className="card card-dark">
+              <p className="module-path">{t.beforeAfter.afterLabel}</p>
+              <h3>{t.beforeAfter.afterTitle}</h3>
+              <p className="body-lg text-light">{t.beforeAfter.afterText}</p>
+            </article>
+          </div>
+        </section>
+
         {/* MENTOR */}
         <section id="mentor" className="band-muted" aria-labelledby="mentor-title">
           <div className="container section split">
