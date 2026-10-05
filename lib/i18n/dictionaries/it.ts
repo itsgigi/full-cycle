@@ -37,7 +37,7 @@ export const it = {
       program: "Programma",
       tracks: "Pacchetti",
       faq: "FAQ",
-      waitlist: "Iscriviti",
+      waitlist: "Candidati",
     },
     langSwitch: "Lingua",
     footerTagline: "Mentorship 1:1 per sviluppatori junior: dall'idea alla produzione, su progetti veri.",
@@ -109,7 +109,7 @@ export const it = {
       {
         path: "/frontend",
         title: "Interfacce solide",
-        text: "Componenti, stato, accessibilità e performance con [STACK FRONTEND].",
+        text: "Componenti, stato, accessibilità e performance con React, Next.js e TypeScript.",
         highlight: false,
       },
       {
@@ -232,6 +232,28 @@ export const it = {
       "Deploy live con URL pubblico",
       "Storico di pull request con code review",
     ],
+  },
+
+  ai: {
+    eyebrow: "AI nel workflow",
+    title: "Impara a usare l'AI senza diventare dipendente dall'AI.",
+    body: "L'AI può accelerare lo sviluppo, ma non sostituisce la comprensione del software. La usi per esplorare, generare e iterare; impari a verificare l'output, capire i trade-off e mantenere tu il controllo del codice.",
+    items: [
+      { title: "Genera", text: "Usa l'AI per boilerplate, alternative e prime implementazioni." },
+      { title: "Verifica", text: "Testa, leggi e controlla ciò che produce prima di integrarlo." },
+      { title: "Decidi", text: "Le decisioni tecniche restano tue: architettura, trade-off e qualità." },
+    ],
+  },
+
+  beforeAfter: {
+    eyebrow: "Il salto di livello",
+    title: "La differenza non è quanto codice sai scrivere. È quanto software sai portare fino alla fine.",
+    beforeLabel: "Prima",
+    beforeTitle: "Tutorial → side project → GitHub → "Non mi sento pronto"",
+    beforeText: "Hai imparato strumenti e costruito qualcosa, ma spesso senza vedere tutto ciò che succede tra una prima idea e un prodotto in produzione.",
+    afterLabel: "Dopo",
+    afterTitle: "Idea → architettura → sviluppo → review → test → CI/CD → produzione",
+    afterText: "Sai raccontare le scelte che hai fatto, mostrare come lavori e spiegare un progetto completo anche durante un colloquio.",
   },
 
   mentor: {
