@@ -220,7 +220,7 @@ export const it = {
 
   result: {
     eyebrow: "Alla fine del percorso",
-    title: "Non avrai un altro certificato. Avrai qualcosa da mostrare.",
+    title: "Non avrai un altro certificato. Avrai un GitHub da mostrare.",
     body: "Chi legge il tuo profilo vede progetti completi: architettura documentata, test, pipeline e un'app funzionante online. E vede come lavori in team: pull request, code review e una gestione Git ordinata, con sprint e flusso agile. È la prova concreta che sai lavorare sull'intero ciclo, non solo su un pezzo.",
     repoLabel: "progetto-full-cycle",
     repoSublabel: (n: number) => `${n} file nel repo`,
