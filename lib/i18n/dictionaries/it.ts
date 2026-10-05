@@ -309,6 +309,7 @@ export const it = {
     level: "A che punto sei?",
     budget: "Quanto investiresti in un percorso così?",
     goal: "Cosa vorresti ottenere?",
+    gap: "Cosa ti impedisce oggi di sentirti pronto per un lavoro da developer?",
     optional: "(facoltativo)",
     submit: "Candidati",
     pending: "Invio in corso…",
