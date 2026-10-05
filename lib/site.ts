@@ -19,7 +19,7 @@ export const siteConfig = {
 
   offer: {
     // Prezzo di ogni pacchetto in EUR. null = niente prezzo nei dati strutturati.
-    price: 2000 as number | null,
+    price: 1500 as number | null,
     // Offerta lancio: i primi N studenti selezionati partecipano gratis. 0 = offerta nascosta.
     freeSpots: 3,
     // Impegno totale in formato ISO 8601 per Google (es. "P2M" = 2 mesi, "PT40H" = 40 ore). null = omesso.

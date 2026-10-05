@@ -13,7 +13,7 @@ npm run build && npm start   # produzione
 
 ## Da personalizzare prima di pubblicare
 
-- `lib/site.ts` — valori uguali in tutte le lingue: nome mentor, foto, profili social (`sameAs`), email. Prezzo per pacchetto (`price`, oggi 2000) e posti gratuiti dell'offerta lancio (`freeSpots`, oggi 3; metti 0 per nasconderla).
+- `lib/site.ts` — valori uguali in tutte le lingue: nome mentor, foto, profili social (`sameAs`), email. Prezzo per pacchetto (`price`, oggi 1500) e posti gratuiti dell'offerta lancio (`freeSpots`, oggi 3; metti 0 per nasconderla).
 - `lib/i18n/dictionaries/it.ts` e `en.ts` — tutti i testi tradotti: pacchetti (`tracks`), sezioni, FAQ, ruolo e bio del mentor, prezzo formattato, ore/settimana, `[STACK FRONTEND]`. TypeScript segnala se `en.ts` non ha la stessa forma di `it.ts`.
 - Lingue: ogni pagina vive sotto `/it` o `/en`. `proxy.ts` reindirizza `/` alla lingua dal cookie `NEXT_LOCALE` o da `Accept-Language` (default italiano).
 - `app/privacy/page.tsx` — completa la privacy policy (titolare, conservazione).
@@ -28,7 +28,7 @@ Il form usa una Server Action (`app/actions.ts`): chiede il pacchetto scelto (i 
 - Metadata: title template, description, keywords, canonical, Open Graph, Twitter card, robots, `lang="it"`.
 - OG/Twitter image generate (`app/opengraph-image.tsx`), favicon SVG, apple icon, web manifest.
 - `sitemap.xml` e `robots.txt` generati da `NEXT_PUBLIC_SITE_URL`.
-- JSON-LD: `WebSite`, `ItemList` con un `Course` per pacchetto (+ `Offer` 2000 EUR), `FAQPage`, `Person` (quando il nome mentor è compilato).
+- JSON-LD: `WebSite`, `ItemList` con un `Course` per pacchetto (+ `Offer` 1500 EUR), `FAQPage`, `Person` (quando il nome mentor è compilato).
 - Font self-hosted con `next/font` (niente richieste a Google, niente layout shift), HTML semantico, skip link.
 - Lighthouse mobile: Accessibility, Best Practices e SEO 100.
 

@@ -1,6 +1,6 @@
 import type { Dictionary } from "./it";
 
-const hoursPerWeek = "3-5";
+const hoursPerWeek = "3-5 hours/week";
 
 export const en: Dictionary = {
   meta: {
@@ -109,7 +109,7 @@ export const en: Dictionary = {
       {
         path: "/frontend",
         title: "Solid interfaces",
-        text: "Components, state, accessibility and performance with [FRONTEND STACK].",
+        text: "Components, state, accessibility and performance with React/Next.js.",
         highlight: false,
       },
       {
@@ -162,7 +162,7 @@ export const en: Dictionary = {
     title: "Pick your specialization. The full cycle is always included.",
     body: "Every track starts from the same foundation: the entire software lifecycle. What changes is the project you build and the phases we go deeper on.",
     lifecycleLabel: "$ shared foundation for every track",
-    specializationLabel: "specialization:",
+    specializationLabel: "Specialization:",
     focusLabel: "focus",
     projectLabel: "potential final project",
     fullPrice: "Full price: ",
@@ -335,7 +335,7 @@ export const en: Dictionary = {
   },
 
   offer: {
-    priceLabel: "€2,000",
+    priceLabel: "€1,500",
   },
 
   privacy: {

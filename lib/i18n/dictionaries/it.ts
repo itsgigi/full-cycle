@@ -1,6 +1,6 @@
 // Testi del sito in italiano. en.ts deve avere la stessa forma (controllato da TypeScript).
 
-const hoursPerWeek = "3-5";
+const hoursPerWeek = "3-5 ore/settimana";
 
 export const it = {
   meta: {
@@ -109,7 +109,7 @@ export const it = {
       {
         path: "/frontend",
         title: "Interfacce solide",
-        text: "Componenti, stato, accessibilità e performance con [STACK FRONTEND].",
+        text: "Componenti, stato, accessibilità e performance con React/Next.js.",
         highlight: false,
       },
       {
@@ -162,7 +162,7 @@ export const it = {
     title: "Scegli la specializzazione. Il ciclo completo è sempre incluso.",
     body: "Tutti i pacchetti partono dalla stessa base: l'intero ciclo di vita del software. Cambiano il progetto che costruisci e le fasi su cui andiamo più a fondo.",
     lifecycleLabel: "$ base comune a tutti i pacchetti",
-    specializationLabel: "specializzazione:",
+    specializationLabel: "Specializzazione:",
     focusLabel: "focus",
     projectLabel: "potenziale progetto finale",
     fullPrice: "Prezzo pieno: ",
@@ -337,7 +337,7 @@ export const it = {
   },
 
   offer: {
-    priceLabel: "2.000 €",
+    priceLabel: "1.500 €",
   },
 
   privacy: {
