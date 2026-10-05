@@ -356,8 +356,9 @@ export const en: Dictionary = {
     retentionTitle: "Retention",
     retention:
       "We keep the data for 12 months from sign-up, then delete it from Formspree and from the email inbox. If you start a program, we keep it for the duration of the relationship and for any resulting legal obligations (e.g. tax). You can ask for earlier deletion at any time.",
-    cookiesTitle: "Cookies",
-    cookies: "The site doesn't use profiling cookies or any analytics or tracking tools.",
+    cookiesTitle: "Cookies and analytics",
+    cookies:
+      "The site doesn't use cookies. To understand how the page is used we rely on Vercel Web Analytics, which collects aggregated, anonymous data on pages visited, clicks on the main buttons and general details such as country, browser and device. It stores no cookies on your device and can't identify you: visitors are told apart by a temporary code that resets every 24 hours. Sign-up statistics (track, level, budget) never include your name or email.",
     rightsTitle: "Your rights",
     rights: (email: string) =>
       `You can request access to, correction, deletion, restriction or portability of your data, and object to its processing, at any time by writing to ${email}. You also have the right to lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it) or your local supervisory authority.`,

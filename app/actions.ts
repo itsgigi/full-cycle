@@ -1,5 +1,6 @@
 "use server";
 
+import { track } from "@vercel/analytics/server";
 import { defaultLocale, hasLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
@@ -75,6 +76,13 @@ export async function joinWaitlist(
   } catch (err) {
     console.error("[waitlist] invio fallito:", err);
     return { status: "error", message: msg.generic, values: entry, attempt };
+  }
+
+  // Lato server: non bloccato dagli adblocker. Niente nome/email, solo dati aggregabili.
+  try {
+    await track("Waitlist Signup", { track: entry.track, level: entry.level, budget: entry.budget, lang });
+  } catch (err) {
+    console.error("[waitlist] tracking fallito:", err);
   }
 
   return { status: "success" };

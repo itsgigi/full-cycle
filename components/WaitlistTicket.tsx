@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import TearTicket from "@/components/TearTicket";
 
 // Biglietto della waitlist: strappando la matrice si passa al form.
@@ -21,6 +22,7 @@ export function WaitlistTicket({ ariaLabel, stubCta, stubSub, title, note }: Pro
       color="#2b1d05"
       ariaLabel={ariaLabel}
       onTear={() => {
+        track("Ticket Torn");
         const input = document.getElementById("wl-name");
         input?.scrollIntoView({ behavior: "smooth", block: "center" });
         input?.focus({ preventScroll: true });

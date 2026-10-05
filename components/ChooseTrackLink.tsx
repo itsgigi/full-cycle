@@ -16,6 +16,8 @@ export function ChooseTrackLink({
     <a
       href="#lista"
       className={className}
+      data-track="Track Selected"
+      data-track-track={trackId}
       onClick={() => {
         const radio = document.getElementById(`track-${trackId}`);
         if (radio instanceof HTMLInputElement) radio.checked = true;

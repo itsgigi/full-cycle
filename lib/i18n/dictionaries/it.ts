@@ -358,8 +358,9 @@ export const it = {
     retentionTitle: "Conservazione",
     retention:
       "Conserviamo i dati per 12 mesi dall'iscrizione, poi li cancelliamo da Formspree e dalla casella email. Se inizi un percorso, li conserviamo per la durata del rapporto e per gli obblighi di legge che ne derivano (ad esempio fiscali). Puoi chiederne la cancellazione anticipata in qualsiasi momento.",
-    cookiesTitle: "Cookie",
-    cookies: "Il sito non usa cookie di profilazione né strumenti di analisi o tracciamento.",
+    cookiesTitle: "Cookie e statistiche",
+    cookies:
+      "Il sito non usa cookie. Per capire come viene usata la pagina usiamo Vercel Web Analytics, che raccoglie in forma aggregata e anonima le pagine visitate, i click sui pulsanti principali e dati generici come paese, browser e dispositivo. Non salva cookie sul tuo dispositivo e non permette di identificarti: i visitatori sono distinti tramite un codice temporaneo che si azzera ogni 24 ore. Le statistiche sull'iscrizione (pacchetto, livello, budget) non includono nome né email.",
     rightsTitle: "I tuoi diritti",
     rights: (email: string) =>
       `Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento scrivendo a ${email}. Hai anche il diritto di proporre reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).`,

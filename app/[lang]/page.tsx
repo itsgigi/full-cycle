@@ -193,11 +193,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
               />
             </div>
             <div className="cta-row">
-              <a href="#lista" className="btn btn-glow btn-lg">
+              <a href="#lista" className="btn btn-glow btn-lg" data-track="CTA Click" data-track-location="hero_waitlist">
                 {t.hero.ctaPrimary}
                 <span className="btn-arrow" aria-hidden="true">→</span>
               </a>
-              <a href="#pacchetti" className="btn btn-glass btn-lg">{t.hero.ctaSecondary}</a>
+              <a href="#pacchetti" className="btn btn-glass btn-lg" data-track="CTA Click" data-track-location="hero_tracks">{t.hero.ctaSecondary}</a>
             </div>
             {offer.freeSpots > 0 && (
               <p className="promo">
@@ -424,7 +424,15 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
               </ul>
               <div className="mentor-links">
                 {mentor.links.map((l) => (
-                  <a key={l.href} href={l.href} className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="btn btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-track="Mentor Link Click"
+                    data-track-label={l.label}
+                  >
                     {l.label}
                     <span aria-hidden="true">↗</span>
                     <span className="sr-only">{t.mentor.newTab}</span>

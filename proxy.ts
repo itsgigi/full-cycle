@@ -39,5 +39,5 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Esclude asset interni, file con estensione (sitemap.xml, robots.txt, immagini…) e icone generate.
-  matcher: ["/((?!_next|.*\\..*|apple-icon|icon).*)"],
+  matcher: ["/((?!_next|_vercel|.*\\..*|apple-icon|icon).*)"],
 };

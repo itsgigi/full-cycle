@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { IBM_Plex_Mono, Inter, Inter_Tight } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, languageAlternates, localePath, locales, ogLocales } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { TrackClicks } from "@/components/TrackClicks";
 import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
@@ -94,7 +96,11 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
 
   return (
     <html lang={lang} className={`${display.variable} ${sans.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <TrackClicks />
+      </body>
     </html>
   );
 }

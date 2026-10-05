@@ -24,7 +24,7 @@ export function SiteHeader({ lang }: { lang: Locale }) {
           <Link href={localePath(lang, "/#pacchetti")} className="nav-link">{t.nav.tracks}</Link>
           <Link href={localePath(lang, "/#faq")} className="nav-link">{t.nav.faq}</Link>
           <LocaleSwitcher lang={lang} label={t.langSwitch} />
-          <Link href={localePath(lang, "/#lista")} className="btn btn-glow btn-sm">{t.nav.waitlist}</Link>
+          <Link href={localePath(lang, "/#lista")} className="btn btn-glow btn-sm" data-track="CTA Click" data-track-location="nav_waitlist">{t.nav.waitlist}</Link>
         </nav>
       </div>
     </header>
