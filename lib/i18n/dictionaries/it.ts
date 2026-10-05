@@ -345,15 +345,24 @@ export const it = {
     description: (name: string) => `Come ${name} tratta i dati raccolti tramite la lista d'attesa.`,
     controller: (who: string, email: string) => `Titolare del trattamento: ${who}, contattabile all'indirizzo ${email}.`,
     dataTitle: "Dati raccolti",
-    data: "Tramite il modulo della lista d'attesa raccogliamo nome, email, livello di esperienza, fascia di budget e, se lo indichi, il tuo obiettivo.",
+    data: "Tramite il modulo della lista d'attesa raccogliamo nome, email, pacchetto di interesse e, se li indichi, livello di esperienza, fascia di budget e obiettivo. Nome, email e pacchetto sono necessari per ricontattarti: senza non possiamo gestire la tua richiesta. Gli altri campi sono facoltativi.",
     purposeTitle: "Finalità",
     purpose: (name: string) =>
-      `Usiamo questi dati solo per contattarti riguardo al percorso ${name} e fissare una call conoscitiva. Non li cediamo a terzi per finalità di marketing.`,
+      `Usiamo questi dati solo per ricontattarti, di norma entro 24-48 ore, riguardo al percorso ${name} e per fissare una call conoscitiva. Non li usiamo per newsletter o marketing e non li cediamo a terzi.`,
+    legalBasisTitle: "Base giuridica",
+    legalBasis:
+      "Il trattamento si basa sulla tua richiesta di essere ricontattato, cioè su misure precontrattuali adottate su tua richiesta (art. 6, par. 1, lett. b GDPR).",
+    recipientsTitle: "Dove sono salvati i dati",
+    recipients:
+      "Il sito è ospitato su Vercel. Le iscrizioni sono raccolte tramite Formspree, che le salva sui propri server e le inoltra alla casella email del titolare. Questi fornitori agiscono come responsabili del trattamento e possono trattare i dati negli Stati Uniti, con le garanzie previste dal GDPR (EU-US Data Privacy Framework o clausole contrattuali standard). Il fornitore di hosting registra inoltre dati tecnici delle visite, come l'indirizzo IP, per sicurezza e per periodi limitati.",
     retentionTitle: "Conservazione",
-    retention: "[Indica per quanto tempo conservi i dati e su quali servizi sono salvati.]",
+    retention:
+      "Conserviamo i dati per 12 mesi dall'iscrizione, poi li cancelliamo da Formspree e dalla casella email. Se inizi un percorso, li conserviamo per la durata del rapporto e per gli obblighi di legge che ne derivano (ad esempio fiscali). Puoi chiederne la cancellazione anticipata in qualsiasi momento.",
+    cookiesTitle: "Cookie",
+    cookies: "Il sito non usa cookie di profilazione né strumenti di analisi o tracciamento.",
     rightsTitle: "I tuoi diritti",
     rights: (email: string) =>
-      `Puoi chiedere in qualsiasi momento accesso, rettifica o cancellazione dei tuoi dati scrivendo a ${email}.`,
+      `Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento scrivendo a ${email}. Hai anche il diritto di proporre reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).`,
   },
 
   notFound: {

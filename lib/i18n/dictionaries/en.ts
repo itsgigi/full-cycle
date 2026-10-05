@@ -343,15 +343,24 @@ export const en: Dictionary = {
     description: (name: string) => `How ${name} handles the data collected through the waitlist.`,
     controller: (who: string, email: string) => `Data controller: ${who}, reachable at ${email}.`,
     dataTitle: "Data collected",
-    data: "Through the waitlist form we collect your name, email, experience level, budget range and, if you share it, your goal.",
+    data: "Through the waitlist form we collect your name, email, the track you're interested in and, if you share them, your experience level, budget range and goal. Name, email and track are required to get back to you: without them we can't handle your request. The other fields are optional.",
     purposeTitle: "Purpose",
     purpose: (name: string) =>
-      `We use this data only to contact you about the ${name} program and schedule an intro call. We don't share it with third parties for marketing purposes.`,
+      `We use this data only to get back to you, usually within 24-48 hours, about the ${name} program and to schedule an intro call. We don't use it for newsletters or marketing and we don't share it with third parties.`,
+    legalBasisTitle: "Legal basis",
+    legalBasis:
+      "Processing is based on your request to be contacted, i.e. on pre-contractual steps taken at your request (Art. 6(1)(b) GDPR).",
+    recipientsTitle: "Where the data is stored",
+    recipients:
+      "The site is hosted on Vercel. Sign-ups are collected through Formspree, which stores them on its servers and forwards them to the controller's email inbox. These providers act as data processors and may process data in the United States, under the safeguards required by the GDPR (EU-US Data Privacy Framework or standard contractual clauses). The hosting provider also logs technical visit data, such as IP addresses, for security purposes and for limited periods.",
     retentionTitle: "Retention",
-    retention: "[State how long you keep the data and which services store it.]",
+    retention:
+      "We keep the data for 12 months from sign-up, then delete it from Formspree and from the email inbox. If you start a program, we keep it for the duration of the relationship and for any resulting legal obligations (e.g. tax). You can ask for earlier deletion at any time.",
+    cookiesTitle: "Cookies",
+    cookies: "The site doesn't use profiling cookies or any analytics or tracking tools.",
     rightsTitle: "Your rights",
     rights: (email: string) =>
-      `You can request access to, correction or deletion of your data at any time by writing to ${email}.`,
+      `You can request access to, correction, deletion, restriction or portability of your data, and object to its processing, at any time by writing to ${email}. You also have the right to lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it) or your local supervisory authority.`,
   },
 
   notFound: {

@@ -16,7 +16,6 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/privacy">)
   };
 }
 
-// Testo di base: va rivisto e completato (titolare, base giuridica, conservazione) prima della pubblicazione.
 export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
@@ -33,8 +32,14 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
         <p>{t.data}</p>
         <h2>{t.purposeTitle}</h2>
         <p>{t.purpose(name)}</p>
+        <h2>{t.legalBasisTitle}</h2>
+        <p>{t.legalBasis}</p>
+        <h2>{t.recipientsTitle}</h2>
+        <p>{t.recipients}</p>
         <h2>{t.retentionTitle}</h2>
         <p>{t.retention}</p>
+        <h2>{t.cookiesTitle}</h2>
+        <p>{t.cookies}</p>
         <h2>{t.rightsTitle}</h2>
         <p>{t.rights(contactEmail)}</p>
       </main>
