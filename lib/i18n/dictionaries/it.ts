@@ -237,11 +237,11 @@ export const it = {
   mentor: {
     eyebrow: "Il mentor",
     role: "Software developer",
-    bio: "Sono uno sviluppatore software: progetto e costruisco prodotti web dall'interfaccia al deploy, passando per API, database e pipeline. Ho creato Full Cycle per dare ai junior quello che di solito si impara solo sul campo: lavorare sull'intero ciclo di un progetto vero, con qualcuno che ti rivede il codice.",
+    bio: "Sono uno sviluppatore software e ho lavorato in contesti molto diversi: da piccole realtà in cui costruire un prodotto performante richiede scelte attente, fino a multinazionali con milioni di utenti. Questi contesti mi hanno insegnato che non esiste un unico modo di sviluppare software: cambiano dimensioni, team, obiettivi, vincoli e priorità.",
     points: [
-      "Ti seguo io, 1:1, dalla call iniziale al deploy finale",
-      "Rivedo il tuo codice su ogni pull request",
-      "Scegliamo i progetti in base al lavoro che vuoi fare",
+      "Esperienza in contesti e dimensioni aziendali molto diversi",
+      "Ti seguo 1:1, dalla prima call al deploy finale",
+      "Rivedo il tuo codice e ti aiuto a capire il perché delle scelte tecniche",
     ],
     newTab: " (si apre in una nuova scheda)",
   },
@@ -285,9 +285,9 @@ export const it = {
   },
 
   waitlist: {
-    title: "Stiamo aprendo i primi posti.",
-    body: "Scegli il pacchetto e lasciaci due informazioni: ti contattiamo per una call conoscitiva gratuita prima dell'apertura ufficiale.",
-    bodyFree: (n: number) => ` I primi ${n} studenti selezionati partecipano gratis.`,
+    title: "I primi 3 posti sono gratuiti.",
+    body: "Full Cycle è un percorso 1:1 a numero limitato. Candidati, raccontami da dove parti e facciamo una call conoscitiva per capire se il percorso è adatto a te.",
+    bodyFree: (n: number) => `I primi ${n} partecipanti selezionati partecipano gratuitamente. Il valore del percorso è 2.000 €.`,
   },
 
   ticket: {
@@ -310,7 +310,7 @@ export const it = {
     budget: "Quanto investiresti in un percorso così?",
     goal: "Cosa vorresti ottenere?",
     optional: "(facoltativo)",
-    submit: "Iscriviti",
+    submit: "Candidati",
     pending: "Invio in corso…",
     fineprint: "Niente spam. Usiamo i tuoi dati solo per contattarti su questo percorso.",
     // value stabile (inviato al webhook), label tradotta.
