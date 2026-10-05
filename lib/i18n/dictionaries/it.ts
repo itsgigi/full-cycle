@@ -81,23 +81,23 @@ export const it = {
 
   how: {
     eyebrow: "Come funziona",
-    title: "Un percorso costruito su di te, non un corso registrato.",
+    title: "Lavoriamo come un piccolo team di sviluppo.",
     steps: [
       {
-        title: "Call conoscitiva",
-        text: "Partiamo da dove sei: competenze, obiettivi, il tipo di azienda in cui vuoi lavorare.",
+        title: "Definisci",
+        text: "Partiamo da un'idea e la trasformiamo in requisiti, user story e una roadmap concreta.",
       },
       {
-        title: "Piano su misura",
-        text: "Scegliamo insieme i progetti da costruire e lo stack, in base ai tuoi gap e al mercato che punti.",
+        title: "Costruisci",
+        text: "Sviluppi frontend, backend e database con un'architettura pensata per il progetto.",
       },
       {
-        title: "Costruisci, con review",
-        text: "Sessioni 1:1, code review sulle tue pull request e feedback come in un team vero.",
+        title: "Rivedi",
+        text: "Lavori con branch e pull request, ricevi code review e correggi il codice come in un team.",
       },
       {
-        title: "Portfolio e colloqui",
-        text: "Rifiniamo i repository, prepariamo come raccontarli e ti alleni sulle domande tecniche.",
+        title: "Rilascia",
+        text: "Automatizzi test e CI/CD e porti il progetto online con un deploy reale.",
       },
     ],
   },
@@ -219,8 +219,8 @@ export const it = {
   },
 
   result: {
-    eyebrow: "Il risultato",
-    title: "Un GitHub che parla per te.",
+    eyebrow: "Alla fine del percorso",
+    title: "Non avrai un altro certificato. Avrai qualcosa da mostrare.",
     body: "Chi legge il tuo profilo vede progetti completi: architettura documentata, test, pipeline e un'app funzionante online. E vede come lavori in team: pull request, code review e una gestione Git ordinata, con sprint e flusso agile. È la prova concreta che sai lavorare sull'intero ciclo, non solo su un pezzo.",
     repoLabel: "progetto-full-cycle",
     repoSublabel: (n: number) => `${n} file nel repo`,
