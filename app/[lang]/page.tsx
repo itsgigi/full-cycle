@@ -22,6 +22,7 @@ import LogoLoop from "@/components/LogoLoop";
 import { RepoFolder } from "@/components/RepoFolder";
 import DitherVeil from "@/components/DitherVeil";
 import { Eyebrow } from "@/components/Eyebrow";
+import { Flow } from "@/components/Flow";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { LiveChart } from "@/components/LiveChart";
 import TrueFocus from "@/components/TrueFocus";
@@ -390,12 +391,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </section>
 
         {/* AI */}
-        <section className="band-dark band-spaced" aria-labelledby="ai-title">
+        <section className="band-accent band-spaced" aria-labelledby="ai-title">
           <div className="container section">
             <div className="section-head">
-              <Eyebrow variant="dark">{t.ai.eyebrow}</Eyebrow>
+              <Eyebrow variant="glass">{t.ai.eyebrow}</Eyebrow>
               <h2 id="ai-title" className="display-lg">{t.ai.title}</h2>
-              <p className="body-lg text-light">{t.ai.body}</p>
+              <p className="body-lg text-accent-light">{t.ai.body}</p>
             </div>
             <div className="grid-3">
               {t.ai.items.map((item) => (
@@ -415,15 +416,15 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <h2 id="before-after-title" className="display-lg">{t.beforeAfter.title}</h2>
           </div>
           <div className="grid-2 before-after-grid">
-            <article className="card">
-              <p className="module-path">{t.beforeAfter.beforeLabel}</p>
-              <h3>{t.beforeAfter.beforeTitle}</h3>
-              <p className="body-lg">{t.beforeAfter.beforeText}</p>
+            <article className="card card-dark ba-card">
+              <h3 className="module-path">{t.beforeAfter.beforeLabel}</h3>
+              <Flow steps={t.beforeAfter.beforeSteps} className="flow-dark" />
+              <p className="body-lg text-light">{t.beforeAfter.beforeText}</p>
             </article>
-            <article className="card card-dark">
-              <p className="module-path">{t.beforeAfter.afterLabel}</p>
-              <h3>{t.beforeAfter.afterTitle}</h3>
-              <p className="body-lg text-light">{t.beforeAfter.afterText}</p>
+            <article className="card card-sky ba-card">
+              <h3 className="module-path">{t.beforeAfter.afterLabel}</h3>
+              <Flow steps={t.beforeAfter.afterSteps} className="flow-sky" />
+              <p className="body-lg text-accent-light">{t.beforeAfter.afterText}</p>
             </article>
           </div>
         </section>

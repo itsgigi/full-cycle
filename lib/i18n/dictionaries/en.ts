@@ -219,7 +219,7 @@ export const en: Dictionary = {
 
   result: {
     eyebrow: "At the end of the program",
-    title: "You won’t leave with another certificate. You’ll have a GitHub to show."
+    title: "You won’t leave with another certificate. You’ll have a GitHub to show.",
     body: "A live product, a stronger GitHub and a project you can explain in an interview. Most importantly, you’ll have gone through the full cycle: from idea to production, through technical decisions, review, testing and deployment.",
     repoLabel: "full-cycle-project",
     repoSublabel: (n: number) => `${n} files in the repo`,
@@ -248,10 +248,10 @@ export const en: Dictionary = {
     eyebrow: "The level-up",
     title: "The difference isn't how much code you can write. It's how much software you can take all the way to production.",
     beforeLabel: "Before",
-    beforeTitle: "Tutorial → side project → GitHub → "I don't feel ready"",
+    beforeSteps: ["Tutorial", "side project", "GitHub", "“I don't feel ready”"],
     beforeText: "You've learned tools and built things, but often without seeing everything that happens between a first idea and a product in production.",
     afterLabel: "After",
-    afterTitle: "Idea → architecture → development → review → testing → CI/CD → production",
+    afterSteps: ["Idea", "architecture", "development", "review", "testing", "CI/CD", "production"],
     afterText: "You can explain the decisions you made, show how you work and walk through a complete project in an interview.",
   },
 
@@ -330,6 +330,7 @@ export const en: Dictionary = {
     level: "Where are you at?",
     budget: "How much would you invest in a program like this?",
     goal: "What would you like to achieve?",
+    gap: "What's stopping you today from feeling ready for a developer job?",
     optional: "(optional)",
     submit: "Apply",
     pending: "Sending…",

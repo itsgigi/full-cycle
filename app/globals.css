@@ -962,6 +962,97 @@ h3 {
   background: var(--ink);
   color: #fff;
 }
+.card-sky {
+  background: var(--sky);
+  color: #fff;
+}
+
+/* ---------- Prima / Dopo ---------- */
+
+.before-after-grid {
+  margin-top: 72px;
+}
+.ba-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+}
+.ba-card .module-path {
+  margin: 0;
+  font-weight: 500;
+}
+.ba-card .body-lg {
+  margin: 0;
+}
+.card-dark .module-path {
+  color: var(--dark-text);
+}
+.card-sky .module-path {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Fasi come chip collegati da frecce sottili. */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flow-step {
+  display: flex;
+  align-items: center;
+}
+.flow-chip {
+  padding: 7px 14px;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.flow-arrow {
+  width: 20px;
+  height: 12px;
+  margin: 0 6px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.flow-dark .flow-chip {
+  border-color: var(--dark-line);
+  background: var(--dark);
+}
+.flow-dark .flow-arrow {
+  color: #5c5c5c;
+}
+/* Il "non mi sento pronto": tratteggiato, un punto d'arrivo che non arriva. */
+.flow-dark .flow-end .flow-chip {
+  border-style: dashed;
+  border-color: #5c5c5c;
+  background: transparent;
+  color: var(--dark-text);
+  font-style: italic;
+}
+.flow-sky .flow-chip {
+  border-color: var(--glass-line);
+  background: var(--glass);
+}
+.flow-sky .flow-arrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+.flow-sky .flow-end .flow-chip {
+  border-color: #fff;
+  background: #fff;
+  color: var(--accent);
+}
 .step {
   text-align: center;
 }

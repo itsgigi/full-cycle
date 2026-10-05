@@ -249,10 +249,10 @@ export const it = {
     eyebrow: "Il salto di livello",
     title: "La differenza non è quanto codice sai scrivere. È quanto software sai portare fino alla fine.",
     beforeLabel: "Prima",
-    beforeTitle: "Tutorial → side project → GitHub → "Non mi sento pronto"",
+    beforeSteps: ["Tutorial", "side project", "GitHub", "“Non mi sento pronto”"],
     beforeText: "Hai imparato strumenti e costruito qualcosa, ma spesso senza vedere tutto ciò che succede tra una prima idea e un prodotto in produzione.",
     afterLabel: "Dopo",
-    afterTitle: "Idea → architettura → sviluppo → review → test → CI/CD → produzione",
+    afterSteps: ["Idea", "architettura", "sviluppo", "review", "test", "CI/CD", "produzione"],
     afterText: "Sai raccontare le scelte che hai fatto, mostrare come lavori e spiegare un progetto completo anche durante un colloquio.",
   },
 
