@@ -379,6 +379,7 @@ export const en: Dictionary = {
     problem: {
       eyebrow: "The problem",
       title: "Everyone talks about AI. Few juniors have ever shipped it.",
+      note: "That's why teams need people who can take AI into a real product: data, evaluation, costs and deployment. The model is just one piece.",
       items: [
         {
           title: "Companies are putting AI into their products",

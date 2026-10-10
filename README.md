@@ -25,7 +25,13 @@ Il form usa una Server Action (`app/actions.ts`): chiede il pacchetto scelto (i 
 
 ## Variante AI (A/B test)
 
-`/it/ai` e `/en/ai` mostrano la stessa landing (`components/LandingPage.tsx`) con il focus sul prodotto AI. I testi sono nel blocco `ai` dei dizionari, che sostituisce o completa le sezioni della home (`getPageContent` in `lib/i18n/dictionaries.ts`). Offerta e prezzo sono gli stessi. Ogni iscrizione invia `variant` (`base` o `ai`); la variante AI invia anche `aiExperience` (`never`, `tried`, `project` o vuoto). `variant` arriva anche nell'evento `Waitlist Signup` di Vercel Analytics.
+`/it/ai` e `/en/ai`: stessa offerta e stesso form della home, focus sul prodotto AI e design dedicato. I testi sono nel blocco `ai` dei dizionari, che sostituisce o completa le sezioni della home (`getPageContent` in `lib/i18n/dictionaries.ts`). Ogni iscrizione invia `variant` (`base` o `ai`); la variante AI invia anche `aiExperience` (`never`, `tried`, `project` o vuoto). `variant` arriva anche nell'evento `Waitlist Signup` di Vercel Analytics.
+
+Design e animazioni della variante:
+- Componenti in `components/ai/` (`AiLanding` compone la pagina; `Hero` + `HeroIllustration`, `Chip`, `Connector`, una sezione per file).
+- Stili: Tailwind CSS v4 solo per questa pagina (`app/[lang]/ai/ai.css`): niente preflight, utility generate solo da `components/ai`, quindi la home non cambia.
+- Animazioni con GSAP (ScrollTrigger, SplitText, MotionPath) e smooth scroll con Lenis. Con `prefers-reduced-motion` si vede subito lo stato finale; senza JS un `<noscript>` mostra tutto.
+- Le illustrazioni sono codice (div + SVG), le icone da `lucide-react`.
 
 ## SEO incluso
 

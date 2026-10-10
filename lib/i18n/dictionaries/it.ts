@@ -384,6 +384,8 @@ export const it = {
     problem: {
       eyebrow: "Il problema",
       title: "Tutti parlano di AI. Pochi junior l'hanno mai messa in produzione.",
+      // Frase sotto il diagramma della sezione.
+      note: "Per questo serve chi sa portare l'AI in un prodotto vero: dati, valutazione, costi e deploy. Il modello è solo un pezzo.",
       items: [
         {
           title: "Le aziende mettono l'AI nei prodotti",

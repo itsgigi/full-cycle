@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LandingPage } from "@/components/LandingPage";
+import { AiLanding } from "@/components/ai/AiLanding";
 import { hasLocale, languageAlternates, localePath, locales, ogLocales } from "@/lib/i18n/config";
 import { getPageContent, variantPaths } from "@/lib/i18n/dictionaries";
 import { siteConfig } from "@/lib/site";
+import "./ai.css";
 
-// Variante AI della landing per l'A/B test: stessa offerta e stesso stile della home, focus sul prodotto AI.
+// Variante AI della landing per l'A/B test: stessa offerta della home, focus sul prodotto AI e design dedicato.
 const path = variantPaths.ai;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/ai">): Promise<Metadata> {
@@ -39,9 +40,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/ai">): Pro
   };
 }
 
-export default async function AiLanding({ params }: PageProps<"/[lang]/ai">) {
+export default async function AiPage({ params }: PageProps<"/[lang]/ai">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
 
-  return <LandingPage lang={lang} variant="ai" />;
+  return <AiLanding lang={lang} />;
 }
