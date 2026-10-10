@@ -325,6 +325,13 @@ export const en: Dictionary = {
       { value: "700-1500", label: "€700 – €1,500" },
       { value: "gt-1500", label: "More than €1,500" },
     ],
+    aiExperience: "Have you ever used an AI model's API?",
+    aiExperiencePlaceholder: "Select",
+    aiExperienceOptions: [
+      { value: "never", label: "Never" },
+      { value: "tried", label: "I've tried it" },
+      { value: "project", label: "I've used it in a project" },
+    ],
     errors: {
       name: "Enter your name.",
       email: "Enter a valid email.",
@@ -332,6 +339,276 @@ export const en: Dictionary = {
       check: "Check the highlighted fields.",
       unavailable: "Sign-ups are temporarily unavailable.",
       generic: "Something went wrong. Please try again shortly.",
+    },
+  },
+
+  ai: {
+    meta: {
+      title: "Full Cycle AI — Build your first AI product, 1:1",
+      description:
+        "1:1 mentorship for junior developers: design, build and ship a complete AI product, from idea to production. LLMs, RAG, evaluation and deployment, working like a real team. Free for the first 3 selected students.",
+      keywords: [
+        "AI course for developers",
+        "LLM course",
+        "RAG course",
+        "AI product",
+        "junior developer",
+        "programming mentorship",
+        "1:1 developer mentorship",
+        "AI model APIs",
+        "embeddings",
+        "semantic search",
+        "LLM evaluation",
+        "production deploy",
+        "code review",
+        "GitHub portfolio",
+        "TypeScript",
+      ],
+      tracksListName: "AI program tracks",
+    },
+
+    lifecycle: ["idea", "data", "prompts", "model & API", "interface", "evaluation", "deploy", "monitoring"],
+    lifecycleAria: "AI product lifecycle phases",
+
+    hero: {
+      title: "Build your first AI product, from idea to production.",
+      subtitle:
+        "A tailored path where you design, build and ship a complete AI product, working like a real team.",
+    },
+
+    problem: {
+      eyebrow: "The problem",
+      title: "Everyone talks about AI. Few juniors have ever shipped it.",
+      items: [
+        {
+          title: "Companies are putting AI into their products",
+          text: "They need people who understand how it works, not just how to use a chat.",
+        },
+        {
+          title: "Tutorials stop at the demo",
+          text: "A notebook or a prototype takes an afternoon. Nobody shows you evaluation, costs, errors and deployment.",
+        },
+        {
+          title: "A complete AI project is still rare",
+          text: "Few juniors have a complete, well-documented AI product on GitHub. The ones who do stand out.",
+        },
+      ],
+    },
+
+    how: {
+      eyebrow: "How it works",
+      title: "A path built around you, not a pre-recorded course.",
+      steps: [
+        {
+          title: "Intro call",
+          text: "We start from where you are: skills, goals, the kind of company you want to work for.",
+        },
+        {
+          title: "Product and use case",
+          text: "Together we choose what to build: the type of product, the problem it solves, the data it uses.",
+        },
+        {
+          title: "Build in sprints, with review",
+          text: "You work like on a team: a ticket board, one pull request per change, code review and a demo every week.",
+        },
+        {
+          title: "Portfolio and interviews",
+          text: "We polish the repository, work on how to present it and you practice technical questions, AI and LLMs included.",
+        },
+      ],
+    },
+
+    program: {
+      eyebrow: "What you learn by building",
+      title: "AI fundamentals, inside a real product.",
+      modules: [
+        {
+          path: "/llm",
+          title: "LLM fundamentals",
+          text: "Tokens, context, cost, latency. And why the model gets things wrong.",
+          highlight: false,
+        },
+        {
+          path: "/prompt",
+          title: "Prompts and structured output",
+          text: "Calling a model's API and getting reliable data back, not random text.",
+          highlight: false,
+        },
+        {
+          path: "/embeddings",
+          title: "Embeddings and semantic search",
+          text: "Finding information by meaning, not by keyword.",
+          highlight: false,
+        },
+        {
+          path: "/rag",
+          title: "RAG and tools",
+          text: "Giving the model your data and letting it call functions.",
+          highlight: false,
+        },
+        {
+          path: "/ui",
+          title: "Interfaces for AI",
+          text: "Streaming, loading states, errors and cited sources.",
+          highlight: false,
+        },
+        {
+          path: "/eval",
+          title: "Evaluation",
+          text: "Test cases that tell you whether a change makes the product better or worse.",
+          highlight: false,
+        },
+        {
+          path: "/production",
+          title: "Production",
+          text: "Deployment, keys and secrets, spending limits, data privacy.",
+          highlight: false,
+        },
+        {
+          path: "/team",
+          title: "Teamwork",
+          text: "Tickets, branches, pull requests and code review, like at a company.",
+          highlight: true,
+        },
+      ],
+    },
+
+    tracks: {
+      title: "Pick the type of product. The full cycle is always included.",
+      body: "You won't become an AI engineer in a few months, and no honest program will promise that. You learn the fundamentals and build a complete AI product at least once, from idea to production. What changes is the type of product and the phases we go deeper on.",
+      specializationLabel: "Type of product:",
+      items: [
+        {
+          id: "rag-assistant",
+          path: "/rag",
+          name: "Document assistant (RAG)",
+          tagline: "Answers questions about documents you choose, and cites its sources.",
+          topics: [
+            "Loading, chunking and indexing documents",
+            "Embeddings and a vector database",
+            "Retrieving the right passages and citing sources",
+            "Streaming chat with loading and error states",
+            "Test cases to measure answer quality",
+          ],
+          project: "An assistant that answers questions about a set of documents you choose, cites its sources and is live at a public URL.",
+          focus: ["data", "prompts", "evaluation"],
+        },
+        {
+          id: "ai-in-app",
+          path: "/ai-app",
+          name: "AI inside an app",
+          tagline: "A regular app, with AI features where they help.",
+          topics: [
+            "A complete app: login, API and database",
+            "Summaries and auto-tagging with structured output",
+            "Extracting data from free text",
+            "Smart search with embeddings",
+            "Costs, spending limits and model errors",
+          ],
+          project: "A complete application with built-in AI features, such as summaries, auto-tagging or smart search, live at a public URL.",
+          focus: ["model & API", "interface", "deploy"],
+        },
+        {
+          id: "vision-multimodal",
+          path: "/vision",
+          name: "Vision and multimodal",
+          tagline: "Analyzes images or audio and generates content.",
+          topics: [
+            "Models that read images and transcribe audio",
+            "Uploading and handling files, client and server side",
+            "Generating content from what the model sees or hears",
+            "Response times, costs and limits of multimodal models",
+            "Evaluation on a test set of images or audio",
+          ],
+          project: "A product that analyzes images or audio uploaded by the user and generates content, live at a public URL.",
+          focus: ["model & API", "interface", "monitoring"],
+        },
+      ],
+    },
+
+    result: {
+      title: "An AI product on your GitHub.",
+      body: "Anyone opening your repository sees a complete AI product: documented architecture, test cases, costs and a live app. They also see how you work in a team: tickets, pull requests and code review. In an interview, being able to explain your system's limits counts as much as making it work.",
+      repoLabel: "ai-product",
+      repoChecklist: [
+        "README with architecture and technical decisions",
+        "Live product with a public URL",
+        "Test cases for evaluation",
+        "Documented costs and limits",
+        "A “Where it fails and why” section",
+        "Pull request history with code review",
+      ],
+    },
+
+    mentor: {
+      bio: "I'm a software developer: I design and build web products from the interface to the deploy. At my company I led the adoption of AI and built an internal RAG system. I created Full Cycle to give juniors what you usually only learn on the job: taking a real product to production, with someone reviewing your code.",
+      points: [
+        "I mentor you personally, 1:1, from the first call to the final deploy",
+        "I review your code on every pull request",
+        "I bring in what I learned building a RAG system at work",
+      ],
+    },
+
+    faq: {
+      items: (o: { freeSpots: number; priceLabel: string }) => [
+        {
+          q: "Is this program right for me?",
+          a: "Yes, if you can already code but have never taken AI beyond a chat or a demo; if you've finished a bootcamp or university, or you're self-taught; if you're looking for your first job (or your next one) and want a real AI project on your GitHub; if you want a path guided by a person, not just videos.",
+        },
+        {
+          q: "When is it not a fit?",
+          a: "If you've never written a line of code, if you're looking for a certificate to put on your CV, if you want to do research on models, or if you can't set aside a few hours a week for the project.",
+        },
+        {
+          q: "Will I become an AI engineer?",
+          a: "No. You learn the fundamentals and build a complete AI product, from idea to production. You'll have the foundation to understand how it works, contribute to AI projects and go deeper.",
+        },
+        {
+          q: "Do I need Python or the math behind the models?",
+          a: "No. We work in TypeScript with model APIs: you use the models, you don't train them.",
+        },
+        {
+          q: "What level do I need to start?",
+          a: "You should know the basics of JavaScript or TypeScript and have already built something, even small. We calibrate the rest in the intro call.",
+        },
+        {
+          q: "How much time do I need?",
+          a: `${hoursPerWeek} on average, between sessions and project work. The pace adapts to people who are studying or already working.`,
+        },
+        {
+          q: "How much does using model APIs cost?",
+          a: "A few euros for the whole project. I'll show you how to set spending limits, so there are no surprises.",
+        },
+        {
+          q: "Does the product have to work perfectly?",
+          a: "No. It has to work end to end and be honest about its limits. That's how real products work too.",
+        },
+        {
+          q: "How do I choose a track?",
+          a: "Pick the type of product closest to what you want to build. If you're not sure, choose Custom: we define the use case on the call.",
+        },
+        {
+          q: `How are the ${o.freeSpots} free students selected?`,
+          a: `From the people on the waitlist, after the intro call. The first ${o.freeSpots} selected take their chosen track for free; for everyone else the price is ${o.priceLabel}.`,
+        },
+        {
+          q: "Do I own my project?",
+          a: "Yes, the code is yours and lives on your GitHub.",
+        },
+        {
+          q: "Do you guarantee a job?",
+          a: "No. We give you skills, a concrete portfolio and interview preparation: the tools to present yourself far better than before.",
+        },
+      ],
+    },
+
+    waitlist: {
+      body: "Choose the type of product and tell us a bit about yourself: we'll reach out for a free intro call before the official launch.",
+    },
+
+    form: {
+      track: "What type of product do you want to build?",
+      customTrack: { id: "custom", name: "Custom", tagline: "We define the use case together on the call." },
     },
   },
 
@@ -344,7 +621,7 @@ export const en: Dictionary = {
     description: (name: string) => `How ${name} handles the data collected through the waitlist.`,
     controller: (who: string, email: string) => `Data controller: ${who}, reachable at ${email}.`,
     dataTitle: "Data collected",
-    data: "Through the waitlist form we collect your name, email, the track you're interested in and, if you share them, your experience level, budget range and goal. Name, email and track are required to get back to you: without them we can't handle your request. The other fields are optional.",
+    data: "Through the waitlist form we collect your name, email, the track you're interested in, the version of the page you signed up from and, if you share them, your experience level, budget range, experience with AI model APIs and goal. Name, email and track are required to get back to you: without them we can't handle your request. The other fields are optional.",
     purposeTitle: "Purpose",
     purpose: (name: string) =>
       `We use this data only to get back to you, usually within 24-48 hours, about the ${name} program and to schedule an intro call. We don't use it for newsletters or marketing and we don't share it with third parties.`,
@@ -359,7 +636,7 @@ export const en: Dictionary = {
       "We keep the data for 12 months from sign-up, then delete it from Formspree and from the email inbox. If you start a program, we keep it for the duration of the relationship and for any resulting legal obligations (e.g. tax). You can ask for earlier deletion at any time.",
     cookiesTitle: "Cookies and analytics",
     cookies:
-      "The site doesn't use cookies. To understand how the page is used we rely on Vercel Web Analytics, which collects aggregated, anonymous data on pages visited, clicks on the main buttons and general details such as country, browser and device. It stores no cookies on your device and can't identify you: visitors are told apart by a temporary code that resets every 24 hours. Sign-up statistics (track, level, budget) never include your name or email.",
+      "The site doesn't use cookies. To understand how the page is used we rely on Vercel Web Analytics, which collects aggregated, anonymous data on pages visited, clicks on the main buttons and general details such as country, browser and device. It stores no cookies on your device and can't identify you: visitors are told apart by a temporary code that resets every 24 hours. Sign-up statistics (track, level, budget, page version) never include your name or email.",
     rightsTitle: "Your rights",
     rights: (email: string) =>
       `You can request access to, correction, deletion, restriction or portability of your data, and object to its processing, at any time by writing to ${email}. You also have the right to lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it) or your local supervisory authority.`,

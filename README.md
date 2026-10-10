@@ -23,6 +23,10 @@ npm run build && npm start   # produzione
 
 Il form usa una Server Action (`app/actions.ts`): chiede il pacchetto scelto (i bottoni "Scegli …" delle card lo preselezionano), valida i campi, filtra i bot con un honeypot e invia l'iscrizione in JSON a `WAITLIST_WEBHOOK_URL` (Zapier, Make, n8n, Google Apps Script…). In produzione, senza webhook, il form mostra un errore invece di perdere iscrizioni in silenzio. Funziona anche senza JavaScript.
 
+## Variante AI (A/B test)
+
+`/it/ai` e `/en/ai` mostrano la stessa landing (`components/LandingPage.tsx`) con il focus sul prodotto AI. I testi sono nel blocco `ai` dei dizionari, che sostituisce o completa le sezioni della home (`getPageContent` in `lib/i18n/dictionaries.ts`). Offerta e prezzo sono gli stessi. Ogni iscrizione invia `variant` (`base` o `ai`); la variante AI invia anche `aiExperience` (`never`, `tried`, `project` o vuoto). `variant` arriva anche nell'evento `Waitlist Signup` di Vercel Analytics.
+
 ## SEO incluso
 
 - Metadata: title template, description, keywords, canonical, Open Graph, Twitter card, robots, `lang="it"`.

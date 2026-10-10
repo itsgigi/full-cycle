@@ -4,19 +4,23 @@ import { useActionState } from "react";
 import Link from "next/link";
 import { joinWaitlist, type WaitlistState } from "@/app/actions";
 import type { Locale } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/dictionaries";
+import type { Dictionary, Variant } from "@/lib/i18n/dictionaries";
 
 const initialState: WaitlistState = { status: "idle" };
 
 type Props = {
   lang: Locale;
+  // Variante della landing (A/B test), inviata con l'iscrizione.
+  variant: Variant;
+  // Mostra la domanda facoltativa sull'uso delle API dei modelli AI.
+  askAiExperience?: boolean;
   t: Dictionary["form"];
   tracks: { id: string; name: string; tagline: string }[];
   privacyHref: string;
   privacyLabel: string;
 };
 
-export function WaitlistForm({ lang, t, tracks, privacyHref, privacyLabel }: Props) {
+export function WaitlistForm({ lang, variant, askAiExperience = false, t, tracks, privacyHref, privacyLabel }: Props) {
   const [state, formAction, pending] = useActionState(joinWaitlist, initialState);
 
   if (state.status === "success") {
@@ -34,6 +38,7 @@ export function WaitlistForm({ lang, t, tracks, privacyHref, privacyLabel }: Pro
   return (
     <form key={state.attempt ?? 0} action={formAction} className="waitlist-form" noValidate>
       <input type="hidden" name="lang" value={lang} />
+      <input type="hidden" name="variant" value={variant} />
       <div className="field">
         <label htmlFor="wl-name">{t.name}</label>
         <input
@@ -108,6 +113,20 @@ export function WaitlistForm({ lang, t, tracks, privacyHref, privacyLabel }: Pro
           ))}
         </select>
       </div>
+
+      {askAiExperience && (
+        <div className="field">
+          <label htmlFor="wl-ai-experience">
+            {t.aiExperience} <span className="muted">{t.optional}</span>
+          </label>
+          <select id="wl-ai-experience" name="aiExperience" defaultValue={values?.aiExperience ?? ""}>
+            <option value="">{t.aiExperiencePlaceholder}</option>
+            {t.aiExperienceOptions.map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div className="field">
         <label htmlFor="wl-goal">

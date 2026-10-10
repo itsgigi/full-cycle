@@ -2,7 +2,9 @@
 // I valori tra [PARENTESI] sono segnaposto da sostituire.
 
 export const siteConfig = {
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  // Solo l'origin (schema + dominio): un percorso nella variabile (es. ".../it") finirebbe in ogni URL
+  // assoluto, e Next lo antepone anche ai path dei metadata (canonical "/it" -> "/it/it").
+  url: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").origin,
   name: "Full Cycle",
   shortName: "full/cycle",
   accent: "#4F46E5",

@@ -1,8 +1,8 @@
 import { defaultLocale, hasLocale, locales } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getPageContent } from "@/lib/i18n/dictionaries";
 import { ogSize, renderOgImage } from "@/lib/og";
 
-export const alt = getDictionary(defaultLocale).meta.title;
+export const alt = getPageContent(defaultLocale, "ai").meta.title;
 export const size = ogSize;
 export const contentType = "image/png";
 
@@ -12,6 +12,6 @@ export function generateStaticParams() {
 
 export default async function OpenGraphImage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const t = getDictionary(hasLocale(lang) ? lang : defaultLocale);
-  return renderOgImage(t, t.hero.subtitle);
+  const t = getPageContent(hasLocale(lang) ? lang : defaultLocale, "ai");
+  return renderOgImage(t, t.hero.title);
 }

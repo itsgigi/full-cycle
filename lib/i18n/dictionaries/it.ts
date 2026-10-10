@@ -327,6 +327,14 @@ export const it = {
       { value: "700-1500", label: "700 – 1.500 €" },
       { value: "gt-1500", label: "Più di 1.500 €" },
     ],
+    // Domanda mostrata solo nella variante AI.
+    aiExperience: "Hai mai usato l'API di un modello AI?",
+    aiExperiencePlaceholder: "Seleziona",
+    aiExperienceOptions: [
+      { value: "never", label: "Mai" },
+      { value: "tried", label: "Ho provato" },
+      { value: "project", label: "L'ho usata in un progetto" },
+    ],
     errors: {
       name: "Inserisci il tuo nome.",
       email: "Inserisci un'email valida.",
@@ -334,6 +342,279 @@ export const it = {
       check: "Controlla i campi evidenziati.",
       unavailable: "Iscrizioni temporaneamente non disponibili.",
       generic: "Qualcosa è andato storto. Riprova tra poco.",
+    },
+  },
+
+  // Variante /ai (A/B test): sostituisce solo le sezioni elencate qui, il resto viene dalla home.
+  // Le sezioni con lo stesso nome della home vengono unite a quelle (vedi getPageContent).
+  ai: {
+    meta: {
+      title: "Full Cycle AI — Costruisci il tuo primo prodotto AI, percorso 1:1",
+      description:
+        "Percorso 1:1 per sviluppatori junior: progetti, sviluppi e metti online un prodotto AI completo, dall'idea alla produzione. LLM, RAG, valutazione e deploy, lavorando come in un team vero. Gratis per i primi 3 studenti selezionati.",
+      keywords: [
+        "corso AI per sviluppatori",
+        "corso LLM",
+        "corso RAG",
+        "prodotto AI",
+        "sviluppatore junior",
+        "mentorship programmazione",
+        "percorso 1:1 sviluppatori",
+        "API modelli AI",
+        "embeddings",
+        "ricerca semantica",
+        "valutazione LLM",
+        "deploy in produzione",
+        "code review",
+        "portfolio GitHub",
+        "TypeScript",
+      ],
+      tracksListName: "Pacchetti del percorso AI",
+    },
+
+    lifecycle: ["idea", "dati", "prompt", "modello e API", "interfaccia", "valutazione", "deploy", "monitoraggio"],
+    lifecycleAria: "Fasi del ciclo di vita di un prodotto AI",
+
+    hero: {
+      title: "Costruisci il tuo primo prodotto AI, dall'idea alla produzione.",
+      subtitle:
+        "Un percorso su misura in cui progetti, sviluppi e metti online un prodotto AI completo, lavorando come in un team vero.",
+    },
+
+    problem: {
+      eyebrow: "Il problema",
+      title: "Tutti parlano di AI. Pochi junior l'hanno mai messa in produzione.",
+      items: [
+        {
+          title: "Le aziende mettono l'AI nei prodotti",
+          text: "E cercano persone che sappiano come funziona, non solo come si usa una chat.",
+        },
+        {
+          title: "I tutorial si fermano alla demo",
+          text: "Un notebook o un prototipo si fanno in un pomeriggio. Nessuno ti mostra valutazione, costi, errori e deploy.",
+        },
+        {
+          title: "Un progetto AI completo è ancora raro",
+          text: "Pochi junior hanno su GitHub un prodotto AI completo e ben documentato. Chi ce l'ha si nota.",
+        },
+      ],
+    },
+
+    how: {
+      eyebrow: "Come funziona",
+      title: "Un percorso costruito su di te, non un corso registrato.",
+      steps: [
+        {
+          title: "Call conoscitiva",
+          text: "Partiamo da dove sei: competenze, obiettivi, il tipo di azienda in cui vuoi lavorare.",
+        },
+        {
+          title: "Prodotto e caso d'uso",
+          text: "Scegliamo insieme cosa costruire: il tipo di prodotto, il problema che risolve, i dati che usa.",
+        },
+        {
+          title: "Costruisci in sprint, con review",
+          text: "Lavori come in un team: board con i ticket, una pull request per ogni modifica, code review e una demo ogni settimana.",
+        },
+        {
+          title: "Portfolio e colloqui",
+          text: "Rifiniamo il repository, prepariamo come raccontarlo e ti alleni sulle domande tecniche, anche su AI e LLM.",
+        },
+      ],
+    },
+
+    program: {
+      eyebrow: "Cosa impari costruendo",
+      title: "Le basi dell'AI, dentro un prodotto vero.",
+      modules: [
+        {
+          path: "/llm",
+          title: "Fondamenti degli LLM",
+          text: "Token, contesto, costi, latenza. E perché il modello sbaglia.",
+          highlight: false,
+        },
+        {
+          path: "/prompt",
+          title: "Prompt e output strutturato",
+          text: "Chiamare l'API di un modello e ottenere dati affidabili, non testo a caso.",
+          highlight: false,
+        },
+        {
+          path: "/embeddings",
+          title: "Embeddings e ricerca semantica",
+          text: "Trovare informazioni per significato, non per parola chiave.",
+          highlight: false,
+        },
+        {
+          path: "/rag",
+          title: "RAG e strumenti",
+          text: "Dare al modello i tuoi dati e fargli chiamare funzioni.",
+          highlight: false,
+        },
+        {
+          path: "/ui",
+          title: "Interfaccia per l'AI",
+          text: "Streaming, stati di attesa, errori e fonti citate.",
+          highlight: false,
+        },
+        {
+          path: "/eval",
+          title: "Valutazione",
+          text: "Casi di prova per capire se una modifica migliora o peggiora il prodotto.",
+          highlight: false,
+        },
+        {
+          path: "/produzione",
+          title: "Produzione",
+          text: "Deploy, chiavi e segreti, limiti di spesa, privacy dei dati.",
+          highlight: false,
+        },
+        {
+          path: "/team",
+          title: "Lavoro in team",
+          text: "Ticket, branch, pull request e code review, come in azienda.",
+          highlight: true,
+        },
+      ],
+    },
+
+    tracks: {
+      title: "Scegli il tipo di prodotto. Il ciclo completo è sempre incluso.",
+      body: "Non diventi AI engineer in qualche mese, e nessun percorso onesto te lo promette. Impari i concetti di base e costruisci un prodotto AI completo almeno una volta, dall'idea alla produzione. Cambia il tipo di prodotto e le fasi su cui andiamo più a fondo.",
+      specializationLabel: "Tipo di prodotto:",
+      // id stabili: usati come ancore e come valore inviato dal form.
+      items: [
+        {
+          id: "rag-assistant",
+          path: "/rag",
+          name: "Assistente sui documenti (RAG)",
+          tagline: "Risponde su documenti scelti da te e cita le fonti.",
+          topics: [
+            "Caricare, dividere e indicizzare i documenti",
+            "Embeddings e database vettoriale",
+            "Recuperare i passaggi giusti e citare le fonti",
+            "Chat in streaming con stati di attesa ed errori",
+            "Casi di prova per misurare la qualità delle risposte",
+          ],
+          project: "Un assistente che risponde su una raccolta di documenti scelta da te, cita le fonti ed è online con un URL pubblico.",
+          focus: ["dati", "prompt", "valutazione"],
+        },
+        {
+          id: "ai-in-app",
+          path: "/ai-app",
+          name: "AI dentro un'app",
+          tagline: "Un'app normale, con funzioni AI dove servono.",
+          topics: [
+            "Un'app completa: login, API e database",
+            "Riassunti e tag automatici con output strutturato",
+            "Estrazione di dati da testo libero",
+            "Ricerca intelligente con embeddings",
+            "Costi, limiti di spesa ed errori del modello",
+          ],
+          project: "Un'applicazione completa con funzioni AI integrate, come riassunti, tag automatici o ricerca intelligente, online con un URL pubblico.",
+          focus: ["modello e API", "interfaccia", "deploy"],
+        },
+        {
+          id: "vision-multimodal",
+          path: "/vision",
+          name: "Visione e multimodale",
+          tagline: "Analizza immagini o audio e genera contenuti.",
+          topics: [
+            "Modelli che leggono immagini e trascrivono audio",
+            "Caricare e gestire file, lato client e server",
+            "Generare contenuti da ciò che il modello vede o sente",
+            "Tempi di risposta, costi e limiti dei modelli multimodali",
+            "Valutazione su un set di immagini o audio di prova",
+          ],
+          project: "Un prodotto che analizza immagini o audio caricati dall'utente e genera contenuti, online con un URL pubblico.",
+          focus: ["modello e API", "interfaccia", "monitoraggio"],
+        },
+      ],
+    },
+
+    result: {
+      title: "Un prodotto AI sul tuo GitHub.",
+      body: "Chi apre il tuo repository vede un prodotto AI completo: architettura documentata, casi di prova, costi e un'app online. E vede come lavori in team: ticket, pull request e code review. Saper spiegare i limiti del proprio sistema, a un colloquio, vale quanto farlo funzionare.",
+      repoLabel: "prodotto-ai",
+      repoChecklist: [
+        "README con architettura e scelte tecniche",
+        "Prodotto online con URL pubblico",
+        "Set di casi di prova per la valutazione",
+        "Costi e limiti documentati",
+        "Sezione «Dove sbaglia e perché»",
+        "Storico di pull request con code review",
+      ],
+    },
+
+    mentor: {
+      bio: "Sono uno sviluppatore software: progetto e costruisco prodotti web dall'interfaccia al deploy. In azienda ho guidato l'adozione dell'AI e ho costruito un sistema RAG interno. Ho creato Full Cycle per dare ai junior quello che di solito si impara solo sul campo: portare un prodotto vero in produzione, con qualcuno che ti rivede il codice.",
+      points: [
+        "Ti seguo io, 1:1, dalla call iniziale al deploy finale",
+        "Rivedo il tuo codice su ogni pull request",
+        "Porto nel percorso quello che ho imparato costruendo un sistema RAG in azienda",
+      ],
+    },
+
+    faq: {
+      items: (o: { freeSpots: number; priceLabel: string }) => [
+        {
+          q: "È il percorso giusto per me?",
+          a: "Sì, se sai già programmare ma con l'AI non sei mai andato oltre una chat o una demo; se hai finito un bootcamp, l'università o studi da autodidatta; se cerchi il primo lavoro (o il prossimo) e vuoi un progetto AI vero sul tuo GitHub; se vuoi un percorso guidato da una persona, non solo video.",
+        },
+        {
+          q: "Quando non fa per me?",
+          a: "Se non hai mai scritto una riga di codice, se cerchi una certificazione da appendere al CV, se vuoi fare ricerca sui modelli o se non hai qualche ora a settimana da dedicare al progetto.",
+        },
+        {
+          q: "Diventerò AI engineer?",
+          a: "No. Impari i concetti di base e costruisci un prodotto AI completo, dall'idea alla produzione. Avrai le basi per capire come funziona, lavorare su progetti AI e approfondire.",
+        },
+        {
+          q: "Devo sapere Python o la matematica dei modelli?",
+          a: "No. Si lavora in TypeScript con le API dei modelli: li usi, non li addestri.",
+        },
+        {
+          q: "Che livello serve per iniziare?",
+          a: "Devi conoscere le basi di JavaScript o TypeScript e aver già costruito qualcosa, anche piccolo. Il resto lo calibriamo nella call iniziale.",
+        },
+        {
+          q: "Quanto tempo devo dedicarci?",
+          a: `${hoursPerWeek} in media, tra sessioni e lavoro sul progetto. Il ritmo si adatta a chi studia o lavora già.`,
+        },
+        {
+          q: "Quanto costa usare le API dei modelli?",
+          a: "Pochi euro per l'intero progetto. Ti insegno a impostare limiti di spesa, così non hai sorprese.",
+        },
+        {
+          q: "Il prodotto deve funzionare perfettamente?",
+          a: "No. Deve funzionare end-to-end ed essere onesto sui suoi limiti. È così anche nei prodotti veri.",
+        },
+        {
+          q: "Come scelgo il pacchetto?",
+          a: "Scegli il tipo di prodotto più vicino a quello che vuoi costruire. Se non sei sicuro, scegli Custom: il caso d'uso lo definiamo nella call.",
+        },
+        {
+          q: `Come vengono scelti i ${o.freeSpots} studenti gratuiti?`,
+          a: `Tra chi entra in lista d'attesa, dopo la call conoscitiva. I primi ${o.freeSpots} selezionati seguono il pacchetto scelto gratuitamente; per gli altri il prezzo è ${o.priceLabel}.`,
+        },
+        {
+          q: "Il progetto resta mio?",
+          a: "Sì, il codice è tuo e vive sul tuo GitHub.",
+        },
+        {
+          q: "Garantite un lavoro?",
+          a: "No. Ti diamo competenze, un portfolio concreto e preparazione ai colloqui: gli strumenti per presentarti molto meglio di prima.",
+        },
+      ],
+    },
+
+    waitlist: {
+      body: "Scegli il tipo di prodotto e lasciaci due informazioni: ti contattiamo per una call conoscitiva gratuita prima dell'apertura ufficiale.",
+    },
+
+    form: {
+      track: "Che tipo di prodotto vuoi costruire?",
+      customTrack: { id: "custom", name: "Custom", tagline: "Il caso d'uso lo definiamo insieme nella call." },
     },
   },
 
@@ -346,7 +627,7 @@ export const it = {
     description: (name: string) => `Come ${name} tratta i dati raccolti tramite la lista d'attesa.`,
     controller: (who: string, email: string) => `Titolare del trattamento: ${who}, contattabile all'indirizzo ${email}.`,
     dataTitle: "Dati raccolti",
-    data: "Tramite il modulo della lista d'attesa raccogliamo nome, email, pacchetto di interesse e, se li indichi, livello di esperienza, fascia di budget e obiettivo. Nome, email e pacchetto sono necessari per ricontattarti: senza non possiamo gestire la tua richiesta. Gli altri campi sono facoltativi.",
+    data: "Tramite il modulo della lista d'attesa raccogliamo nome, email, pacchetto di interesse, la versione della pagina da cui ti iscrivi e, se li indichi, livello di esperienza, fascia di budget, esperienza con le API dei modelli AI e obiettivo. Nome, email e pacchetto sono necessari per ricontattarti: senza non possiamo gestire la tua richiesta. Gli altri campi sono facoltativi.",
     purposeTitle: "Finalità",
     purpose: (name: string) =>
       `Usiamo questi dati solo per ricontattarti, di norma entro 24-48 ore, riguardo al percorso ${name} e per fissare una call conoscitiva. Non li usiamo per newsletter o marketing e non li cediamo a terzi.`,
@@ -361,7 +642,7 @@ export const it = {
       "Conserviamo i dati per 12 mesi dall'iscrizione, poi li cancelliamo da Formspree e dalla casella email. Se inizi un percorso, li conserviamo per la durata del rapporto e per gli obblighi di legge che ne derivano (ad esempio fiscali). Puoi chiederne la cancellazione anticipata in qualsiasi momento.",
     cookiesTitle: "Cookie e statistiche",
     cookies:
-      "Il sito non usa cookie. Per capire come viene usata la pagina usiamo Vercel Web Analytics, che raccoglie in forma aggregata e anonima le pagine visitate, i click sui pulsanti principali e dati generici come paese, browser e dispositivo. Non salva cookie sul tuo dispositivo e non permette di identificarti: i visitatori sono distinti tramite un codice temporaneo che si azzera ogni 24 ore. Le statistiche sull'iscrizione (pacchetto, livello, budget) non includono nome né email.",
+      "Il sito non usa cookie. Per capire come viene usata la pagina usiamo Vercel Web Analytics, che raccoglie in forma aggregata e anonima le pagine visitate, i click sui pulsanti principali e dati generici come paese, browser e dispositivo. Non salva cookie sul tuo dispositivo e non permette di identificarti: i visitatori sono distinti tramite un codice temporaneo che si azzera ogni 24 ore. Le statistiche sull'iscrizione (pacchetto, livello, budget, versione della pagina) non includono nome né email.",
     rightsTitle: "I tuoi diritti",
     rights: (email: string) =>
       `Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento scrivendo a ${email}. Hai anche il diritto di proporre reclamo al Garante per la protezione dei dati personali (garanteprivacy.it).`,

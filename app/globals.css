@@ -788,7 +788,8 @@ h3 {
 .lifecycle-steps {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  /* --steps: numero di fasi, impostato dal componente Lifecycle. */
+  grid-template-columns: repeat(var(--steps, 9), 1fr);
   margin: 0;
   padding: 36px 28px 32px;
   list-style: none;
@@ -799,8 +800,8 @@ h3 {
   content: "";
   position: absolute;
   top: 69px;
-  left: calc(28px + (100% - 56px) / 18);
-  right: calc(28px + (100% - 56px) / 18);
+  left: calc(28px + (100% - 56px) / (2 * var(--steps, 9)));
+  right: calc(28px + (100% - 56px) / (2 * var(--steps, 9)));
   height: 2px;
 }
 .lifecycle-steps::before {

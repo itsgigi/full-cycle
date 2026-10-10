@@ -2,14 +2,14 @@
 
 import { track } from "@vercel/analytics/server";
 import { defaultLocale, hasLocale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getPageContent, isVariant } from "@/lib/i18n/dictionaries";
 
 export type WaitlistState = {
   status: "idle" | "success" | "error";
   message?: string;
   fieldErrors?: Partial<Record<"name" | "email" | "track", string>>;
   // Valori inviati, per ripopolare il form dopo un errore (React resetta il form dopo l'action).
-  values?: Record<"name" | "email" | "track" | "level" | "budget" | "goal", string>;
+  values?: Record<"name" | "email" | "track" | "level" | "budget" | "aiExperience" | "goal", string>;
   // Contatore dei tentativi: usato come key per rimontare il form con i defaultValue aggiornati.
   attempt?: number;
 };
@@ -28,7 +28,10 @@ export async function joinWaitlist(
   const attempt = (prev.attempt ?? 0) + 1;
   const langValue = field(formData, "lang", 10);
   const lang = hasLocale(langValue) ? langValue : defaultLocale;
-  const t = getDictionary(lang);
+  // Variante della landing (A/B test): decide quali pacchetti sono validi.
+  const variantValue = field(formData, "variant", 20);
+  const variant = isVariant(variantValue) ? variantValue : "base";
+  const t = getPageContent(lang, variant);
   const msg = t.form.errors;
   // Honeypot: i bot compilano anche i campi nascosti.
   if (field(formData, "company", 200)) return { status: "success" };
@@ -39,8 +42,10 @@ export async function joinWaitlist(
     track: field(formData, "track", 100),
     level: field(formData, "level", 100),
     budget: field(formData, "budget", 100),
+    aiExperience: field(formData, "aiExperience", 100),
     goal: field(formData, "goal", 2000),
     lang,
+    variant,
   };
 
   const fieldErrors: WaitlistState["fieldErrors"] = {};
@@ -52,6 +57,7 @@ export async function joinWaitlist(
   }
   if (!t.form.levelOptions.some((o) => o.value === entry.level)) entry.level = "";
   if (!t.form.budgetOptions.some((o) => o.value === entry.budget)) entry.budget = "";
+  if (!t.form.aiExperienceOptions.some((o) => o.value === entry.aiExperience)) entry.aiExperience = "";
 
   // Invia l'iscrizione a un webhook (Zapier, Make, n8n, Google Apps Script, Formspree…).
   const webhook = process.env.WAITLIST_WEBHOOK_URL;
@@ -80,7 +86,7 @@ export async function joinWaitlist(
 
   // Lato server: non bloccato dagli adblocker. Niente nome/email, solo dati aggregabili.
   try {
-    await track("Waitlist Signup", { track: entry.track, level: entry.level, budget: entry.budget, lang });
+    await track("Waitlist Signup", { track: entry.track, level: entry.level, budget: entry.budget, lang, variant });
   } catch (err) {
     console.error("[waitlist] tracking fallito:", err);
   }
